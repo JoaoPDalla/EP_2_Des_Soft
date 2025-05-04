@@ -8,3 +8,7 @@ def guardar_dado(rolados,guardados,dado):
     guardados.append(rolados[dado])
     del rolados[dado]
     return [rolados,guardados]
+def remover_dado(rolados,guardados,dado):
+    rolados.append(guardados[dado])
+    del guardados[dado]
+    return [rolados,guardados]

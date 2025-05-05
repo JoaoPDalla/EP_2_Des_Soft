@@ -35,3 +35,9 @@ def calcula_pontos_sequencia_baixa(face_dado):
         if i+1 in face_dado and i+2 in face_dado and i+3 in face_dado:
             return 15
     return 0
+#Exercicos 7 = Luís Felipe:
+def calcula_pontos_sequencia_alta(face_dado):
+    for i in face_dado:
+        if i+1 in face_dado and i+2 in face_dado and i+3 in face_dado and i+4 in face_dado:
+            return 30
+    return 0

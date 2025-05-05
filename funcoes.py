@@ -41,3 +41,23 @@ def calcula_pontos_sequencia_alta(face_dado):
         if i+1 in face_dado and i+2 in face_dado and i+3 in face_dado and i+4 in face_dado:
             return 30
     return 0
+#Exercicos 8 = Luís Felipe:
+def calcula_pontos_full_house(face_dado):
+    numeros = []
+    contagens = []
+    soma=0
+    for i in range(len(face_dado)):
+        numero = face_dado[i]
+        if numero not in numeros:
+            numeros.append(numero)
+            cont = 0
+            for j in range(len(face_dado)):
+                if face_dado[j] == numero:
+                    cont += 1
+            contagens.append(cont)
+    if len(contagens) == 2:
+        if (2 in contagens and 3 in contagens):
+            for n in face_dado:
+                soma+=n
+            return soma
+    return 0

@@ -29,3 +29,9 @@ def calcula_pontos_soma(face_dado):
     for i in face_dado:
         soma+=i
     return soma
+#Exercicos 6 = Luís Felipe:
+def calcula_pontos_sequencia_baixa(face_dado):
+    for i in face_dado:
+        if i+1 in face_dado and i+2 in face_dado and i+3 in face_dado:
+            return 15
+    return 0

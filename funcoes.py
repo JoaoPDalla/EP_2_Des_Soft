@@ -61,3 +61,18 @@ def calcula_pontos_full_house(face_dado):
                 soma+=n
             return soma
     return 0
+#Exercicos 9 = Luís Felipe:
+def calcula_pontos_quadra(face_dado):
+    soma=0
+    for i in range(len(face_dado)):
+        valor = face_dado[i]
+        cont = 0
+        for j in range(len(face_dado)):
+            if face_dado[j] == valor:
+                cont += 1
+        if cont >= 4:
+            for n in face_dado:
+                soma+=n
+            return soma
+    return 0
+

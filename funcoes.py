@@ -75,4 +75,14 @@ def calcula_pontos_quadra(face_dado):
                 soma+=n
             return soma
     return 0
-
+#Exercício 10 = João Pedro Dalla
+def calcula_pontos_quina(dados):
+    cont={}
+    for i in dados:
+        if i not in cont:
+            cont[i]=0
+        cont[i]=cont[i]+1
+        if cont[i]==5:
+            return 50
+    return 0
+#Exercício 11 = João Pedro Dalla

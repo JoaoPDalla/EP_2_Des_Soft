@@ -86,3 +86,13 @@ def calcula_pontos_quina(dados):
             return 50
     return 0
 #Exercício 11 = João Pedro Dalla
+def calcula_pontos_regra_avancada(dados):
+    pontuc={}
+    pontuc['cinco_iguais']=calcula_pontos_quina(dados)
+    pontuc['full_house']=calcula_pontos_full_house(dados)
+    pontuc['quadra']=calcula_pontos_quadra(dados)
+    pontuc['sem_combinacao']=calcula_pontos_soma(dados)
+    pontuc['sequencia_alta']=calcula_pontos_sequencia_alta(dados)
+    pontuc['sequencia_baixa']=calcula_pontos_sequencia_baixa(dados)
+    return pontuc
+#exercício 12 = João Pedro Dalla

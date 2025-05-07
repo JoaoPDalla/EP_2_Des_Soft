@@ -85,11 +85,11 @@ for t in range(0,12):
     j=input()
     for i in guardados:
         rolados.append(i)
-    while j not in possb:
-        print("Combinação inválida. Tente novamente.")
-        j=input()
-    while j in vrfc:
-        print("Essa combinação já foi utilizada.")
+    while j not in possb or j in vrfc:
+        if j not in possb:
+            print("Combinação inválida. Tente novamente.")
+        else:
+            print("Essa combinação já foi utilizada.")    
         j=input()
     vrfc[j]=True
     cartela_de_pontos=fc.faz_jogada(rolados,j,cartela_de_pontos)

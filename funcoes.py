@@ -97,7 +97,6 @@ def calcula_pontos_regra_avancada(dados):
     return pontuc
 #exercício 12 = João Pedro Dalla
 def faz_jogada(dados,categoria,cartela):
-    car=0
     possb=['cinco_iguais','full_house','quadra','sem_combinacao','sequencia_alta','sequencia_baixa']
     if categoria in possb:
         tab=calcula_pontos_regra_avancada(dados)

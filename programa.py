@@ -20,10 +20,10 @@ cartela_de_pontos = {
 pont_a=0
 pont_s=0
 possb=['cinco_iguais','full_house','quadra','sem_combinacao','sequencia_alta','sequencia_baixa','1','2','3','4','5','6']
+possb_indice=['0','1','2','3','4']
 vrfc={}
 fc.imprime_cartela(cartela_de_pontos)
 for t in range(0,12):
-    v=False
     rolados=fc.rolar_dados(5)
     guardados=[]
     uso_r=0
@@ -33,21 +33,37 @@ for t in range(0,12):
     opc=input()
     while opc!='0':
         if opc=='1':
+            ver_s=False
             print("Digite o índice do dado a ser guardado (0 a 4):")
-            g=int(input())
-            while g>len(rolados):
-                print("Opção inválida. Tente novamente.")
-                g=int(input())
-            gi=fc.guardar_dado(rolados,guardados,g)
+            g=input()
+            while ver_s!=True:
+                if g in possb_indice:
+                    if int(g)<len(rolados):
+                        ver_s=True
+                    else:
+                        print("Opção inválida. Tente novamente.")
+                        g=input()
+                else:
+                    print("Opção inválida. Tente novamente.")
+                    g=input()
+            gi=fc.guardar_dado(rolados,guardados,int(g))
             rolados=gi[0]
             guardados=gi[1]
         elif opc=='2':
+            ver_s=False
             print("Digite o índice do dado a ser removido (0 a 4):")
-            r=int(input())
-            while r>len(guardados):
-                print("Opção inválida. Tente novamente.")
-                r=int(input())
-            ri=fc.remover_dado(rolados,guardados,r)
+            r=input()
+            while ver_s!=True:
+                if r in possb_indice:
+                    if int(r)<len(guardados):
+                        ver_s=True
+                    else:
+                        print("Opção inválida. Tente novamente.")
+                        r=input()
+                else:
+                    print("Opção inválida. Tente novamente.")
+                    r=input()
+            ri=fc.remover_dado(rolados,guardados,int(r))
             rolados=ri[0]
             guardados=ri[1]
         elif opc=='3':
